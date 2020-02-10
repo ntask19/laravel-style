@@ -37,6 +37,30 @@ a, b, tmpといった変数名は使わない。英語であっても他の人�
 
 - 関数内の引数、返り値には型を宣言するようにする。
 
+```php:Person.php
+<?php
+
+class Person
+{
+
+    const ADULT_AGE = 20;
+
+    // 引数に型を指定する
+    public function getProfile(string $name, int $age): string # 返り値にもどんな型を想定しているか記載する
+    {
+        return $name . 'は' . $age .'歳です。';
+    }
+
+    public function isAdult(int $age): bool
+    {
+        return $age >= self::ADULT_AGE;
+    }
+}
+
+
+
+```
+
 ## 環境構築について
 
 環境構築は[こちら](build.md)を参照

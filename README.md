@@ -68,6 +68,19 @@ class Person
 
 ```
 
+## HTMLタグ
+
+- blade内のclassはケバブケース( `-` でつなぐ)で、idと変数はスネークケースで統一する。
+- HTMLタグの属性としてidは極力使わない。
+
+```HTML
+
+<div class="hiramasa-rapper">
+    <div id="fish_hiramasa">{{$fish_hiramasa}}</div>
+</div>
+```
+
+
 ## 環境構築について
 
 環境構築は[こちら](build.md)を参照
